@@ -68,24 +68,26 @@ public class MessageListener {
      * @param UserDetails a user defined object used for deserialization of message
      */
     @RabbitListener(queues = "${app1.queue.name}")
-    public void receiveMessageForApp1(final HttpServletRequest data) {
+    public void receiveMessageForApp1(final Object data) {
     	log.info("Received message: {} from app1 queue.", data);
     	System.out.println("**************MESSAGE RECEIVED***************");
     	System.out.println("DATA AS OBJECT "+data);
-    	System.out.println("DATA AS TOSTRING "+data.getParameter("Data"));
-    	System.out.println("**************MESSAGE RECEIVED***************");
+    	//System.out.println("DATA AS TOSTRING "+data.getParameter("Data"));
+    	
 		String exchange = getApplicationConfig().getApp2Exchange();
 		String routingKey = getApplicationConfig().getApp2RoutingKey();
 
 		
 		try {
-			
-			atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data.getParameter("Data"));
+			String decodeData = this.decode(data.toString());
+			System.out.println("*******decodeData********"+decodeData);
+			atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(decodeData);
 			System.out.println("JSON DATA "+json);
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("**************MESSAGE RECEIVED***************");
 		
 		
 //    	try {
@@ -111,6 +113,23 @@ public class MessageListener {
 //    	}
 
     }
+    
+    public  String decode(String url)  
+    {  
+              try {  
+                   String prevURL="";  
+                   String decodeURL=url;  
+                   while(!prevURL.equals(decodeURL))  
+                   {  
+                        prevURL=decodeURL;  
+                        decodeURL=URLDecoder.decode( decodeURL, "UTF-8" );  
+                   }  
+                   return decodeURL;  
+              } catch (UnsupportedEncodingException e) {  
+                   return "Issue while decoding" +e.getMessage();  
+              }  
+    }  
+	
     
     private Object getRequestResponse(String command, String commandSeqId){
     	String fileName = command+"_"+commandSeqId+".json";
