@@ -66,15 +66,25 @@ public class MessageListener {
      * @param UserDetails a user defined object used for deserialization of message
      */
     @RabbitListener(queues = "${app1.queue.name}")
-    public void receiveMessageForApp1(final Object data) {
+    public void receiveMessageForApp1(final String data) {
     	log.info("Received message: {} from app1 queue.", data);
     	System.out.println("**************MESSAGE RECEIVED***************");
     	System.out.println("DATA AS OBJECT "+data);
     	System.out.println("DATA AS TOSTRING "+data.toString());
     	System.out.println("**************MESSAGE RECEIVED***************");
-//		String exchange = getApplicationConfig().getApp2Exchange();
-//		String routingKey = getApplicationConfig().getApp2RoutingKey();
-//
+		String exchange = getApplicationConfig().getApp2Exchange();
+		String routingKey = getApplicationConfig().getApp2RoutingKey();
+
+		
+		try {
+			atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data);
+			System.out.println("JSON DATA "+json);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 //    	try {
 //    		log.info("Getting Response Associated to Request");
 //    		atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data);
