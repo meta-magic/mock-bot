@@ -90,7 +90,7 @@ public class MsgqApplication extends SpringBootServletInitializer implements Rab
 	@Bean
 	public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
 		final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-		rabbitTemplate.setMessageConverter(producerJackson2MessageConverter());
+		//rabbitTemplate.setMessageConverter(producerJackson2MessageConverter());
 		return rabbitTemplate;
 	}
 
@@ -107,7 +107,7 @@ public class MsgqApplication extends SpringBootServletInitializer implements Rab
 	@Bean
 	public DefaultMessageHandlerMethodFactory messageHandlerMethodFactory() {
 		DefaultMessageHandlerMethodFactory factory = new DefaultMessageHandlerMethodFactory();
-		factory.setMessageConverter(consumerJackson2MessageConverter());
+		//factory.setMessageConverter(consumerJackson2MessageConverter());
 		return factory;
 	}
 
