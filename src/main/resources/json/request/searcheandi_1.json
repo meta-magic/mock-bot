@@ -1,0 +1,17 @@
+{
+  "Initial": true,
+  "Data": {
+    "RequestMetaData": {
+      "Command": "Search EandI",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+        "responseTime": "1564385069691",
+      "commandSeqId": 1
+    },
+    "RequestParams": {
+      "memberID": "019122121902",
+      "FirstName": "Ketan",
+      "LastName": "Gote",
+      "DOB": "2019/10/10"
+    }
+  }
+}

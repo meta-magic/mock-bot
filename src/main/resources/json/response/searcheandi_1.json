@@ -1,0 +1,112 @@
+{
+    "Data": {
+      "ResponseMetaData": {
+        "Command": "Search EandI",
+        "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+        "responseTime": "1564385069691",
+        "commandSeqId": 1,
+        "totalResponsesAvailable": 1,
+        "responseSequenceId": 1,
+        "responseSanitizationRequired": true,
+        "completed": false
+      },
+      "ResponseData":[
+      {
+        "Source": "CS",
+        "Last Name": "MILLER",
+        "First Name": "LILA",
+        "MM": "",
+        "EEID": "xxxxxxx8806",
+        "DOB": "01/30/1960",
+        "Relationship": "SPOUSE/DOMESTIC PARTNER",
+        "Policy#": "0712838",
+        "Gender": "F",
+        "Address": "2826 ANNELISE WAY",
+        "City": "FORT COLLINS",
+        "State": "CO",
+        "Zip Code": "80525"
+      },
+      {
+        "Source": "CS",
+        "Last Name": "MILLER",
+        "First Name": "BRUCE",
+        "MM": "J",
+        "EEID": "xxxxxxx8806",
+        "DOB": "03/03/1955",
+        "Relationship": "SUBSCRIBER/RECIPIENT",
+        "Policy#": "0712838",
+        "Gender": "M",
+        "Address": "2826 ANNELISE WAY",
+        "City": "FORT COLLINS",
+        "State": "CO",
+        "Zip Code": "80525"
+      },
+      {
+        "Source": "PR",
+        "Last Name": "MILLER",
+        "First Name": "LILA",
+        "MM": "",
+        "EEID": "xxxxx8806",
+        "DOB": "01/30/1960",
+        "Relationship": "SPOUSE/DOMESTIC PARTNER",
+        "Policy#": "00F7723",
+        "Gender": "F",
+        "Address": "5414 POPLAR LAKES LANE",
+        "City": "LOUISVILLE",
+        "State": "KY",
+        "Zip Code": "40299"
+      },
+      {
+        "Source": "PR",
+        "Last Name": "MILLER",
+        "First Name": "BRUCE",
+        "MM": "",
+        "EEID": "xxxxx8806",
+        "DOB": "03/03/1955",
+        "Relationship": "SUBSCRIBER/RECIPIENT",
+        "Policy#": "00F7723",
+        "Gender": "M",
+        "Address": "5414 POPLAR LAKES LANE",
+        "City": "LOUISVILLE",
+        "State": "KY",
+        "Zip Code": "40299"
+      },
+      {
+        "Source": "CS",
+        "Last Name": "MILLER",
+        "First Name": "BRUCE",
+        "MM": "",
+        "EEID": "xxxxxxx8806",
+        "DOB": "03/03/1955",
+        "Relationship": "SUBSCRIBER/RECIPIENT",
+        "Policy#": "00F7723",
+        "Gender": "M",
+        "Address": "5414 POPLAR LAKES LANE",
+        "City": "LOUISVILLE",
+        "State": "KY",
+        "Zip Code": "40299"
+      },
+      {
+        "Source": "CS",
+        "Last Name": "MILLER",
+        "First Name": "LILA",
+        "MM": "",
+        "EEID": "xxxxxxx8806",
+        "DOB": "01/30/1960",
+        "Relationship": "SPOUSE/DOMESTIC PARTNER",
+        "Policy#": "00F7723",
+        "Gender": "F",
+        "Address": "5414 POPLAR LAKES LANE",
+        "City": "LOUISVILLE",
+        "State": "KY",
+        "Zip Code": "40299"
+      }
+    ],
+      "ResponseStatus": {
+        "success": true,
+        "statusCode": 200,
+        "statusMessage": "Message can be Success or Failure"
+      }
+    }
+  }
+  
