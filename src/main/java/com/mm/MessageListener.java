@@ -128,11 +128,15 @@ public class MessageListener {
      * Message listener for app2
      * 
       Enable for testing purpose.
-    
+    */
 	    @RabbitListener(queues = "${app2.queue.name}")
-	    public void receiveMessageForApp2(String reqObj) {
-	    	log.info("Received message: {} from app2 queue.", reqObj);
+	    public void receiveMessageForApp2(Object data) {
+	    	log.info("Received message: {} from app2 queue.", data);
+	    	System.out.println("**************MESSAGE RECEIVED***************");
+	    	System.out.println("DATA AS OBJECT2 "+data);
+	    	System.out.println("DATA AS TOSTRING2 "+data.toString());
+	    	System.out.println("**************MESSAGE RECEIVED***************");
 	    }
 
-     */
+     
 }
