@@ -94,15 +94,15 @@ public class MsgqApplication extends SpringBootServletInitializer implements Rab
 		return rabbitTemplate;
 	}
 
-	@Bean
-	public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
-		return new Jackson2JsonMessageConverter();
-	}
-
-	@Bean
-	public MappingJackson2MessageConverter consumerJackson2MessageConverter() {
-		return new MappingJackson2MessageConverter();
-	}
+//	@Bean
+//	public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
+//		return new Jackson2JsonMessageConverter();
+//	}
+//
+//	@Bean
+//	public MappingJackson2MessageConverter consumerJackson2MessageConverter() {
+//		return new MappingJackson2MessageConverter();
+//	}
 	
 	@Bean
 	public DefaultMessageHandlerMethodFactory messageHandlerMethodFactory() {

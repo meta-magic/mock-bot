@@ -68,30 +68,30 @@ public class MessageListener {
     @RabbitListener(queues = "${app1.queue.name}")
     public void receiveMessageForApp1(final String data) {
     	log.info("Received message: {} from app1 queue.", data);
-		String exchange = getApplicationConfig().getApp2Exchange();
-		String routingKey = getApplicationConfig().getApp2RoutingKey();
-
-    	try {
-    		log.info("Getting Response Associated to Request");
-    		atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data);
-    		if(json.has("Data") && json.getJSONObject("Data").has("RequestMetaData")){
-    			JSONObject requestMetaData = json.getJSONObject("Data").getJSONObject("RequestMetaData");
-    			if(requestMetaData.has("Command")){
-    				String command = requestMetaData.getString("Command");
-    				String commandSeqId = requestMetaData.getString("commandSeqId");
-    				if (command !=null && commandSeqId!=null){
-    					command = command.toLowerCase().replace(" ", "");
-    					Object response = this.getRequestResponse(command, commandSeqId);
-    		    		messageSender.sendMessage(rabbitTemplate, exchange, routingKey, response.toString());
-    		        	log.info("<< Exiting receiveMessageForApp1() after API call.");
-    				}
-    				
-    			}
-    		}
-    	}  catch(Exception e) {
-    		log.error("Internal server error occurred in API call. Bypassing message requeue {}", e);
-    		throw new AmqpRejectAndDontRequeueException(e); 
-    	}
+//		String exchange = getApplicationConfig().getApp2Exchange();
+//		String routingKey = getApplicationConfig().getApp2RoutingKey();
+//
+//    	try {
+//    		log.info("Getting Response Associated to Request");
+//    		atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data);
+//    		if(json.has("Data") && json.getJSONObject("Data").has("RequestMetaData")){
+//    			JSONObject requestMetaData = json.getJSONObject("Data").getJSONObject("RequestMetaData");
+//    			if(requestMetaData.has("Command")){
+//    				String command = requestMetaData.getString("Command");
+//    				String commandSeqId = requestMetaData.getString("commandSeqId");
+//    				if (command !=null && commandSeqId!=null){
+//    					command = command.toLowerCase().replace(" ", "");
+//    					Object response = this.getRequestResponse(command, commandSeqId);
+//    		    		messageSender.sendMessage(rabbitTemplate, exchange, routingKey, response.toString());
+//    		        	log.info("<< Exiting receiveMessageForApp1() after API call.");
+//    				}
+//    				
+//    			}
+//    		}
+//    	}  catch(Exception e) {
+//    		log.error("Internal server error occurred in API call. Bypassing message requeue {}", e);
+//    		throw new AmqpRejectAndDontRequeueException(e); 
+//    	}
 
     }
     
