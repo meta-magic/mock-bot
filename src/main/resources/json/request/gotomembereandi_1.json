@@ -1,0 +1,14 @@
+{
+      "Initial": true,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "Go To Member EandI",
+          "requestId": this._sharedService.getRequestId(),
+          "requestTime": this._sharedService.getRequestTime(),
+          "commandSeqId": 1
+        },
+        "RequestParams": {
+          "Index": this._sharedService.index
+        }
+      }
+    }

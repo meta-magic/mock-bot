@@ -1,0 +1,42 @@
+{
+    "Data": {
+        "ResponseMetaData": {
+            "Command": "Go To Member EandI",
+            "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+            "responseTime": "1564385069691",
+            "commandSeqId": 2,
+            "totalResponsesAvailable": 3,
+            "responseSequenceId": 2,
+            "responseSanitizationRequired": true,   
+            "completed": false
+        },
+        "ResponseData": [
+            {
+                "Benifit Level": "IIN",
+                "Claim No.": "7632326124-01",
+                "Status": "Rejected",
+                "Provider": "NORTON IMMEDIATE CARE CENTERS",
+                "Service Date": "02/12/2019 - 02/12/2019"
+            },
+            {
+                "Benifit Level": "IIN",
+                "Claim No.": "7566061158-01",
+                "Status": "Rejected",
+                "Provider": "RESULTS PHYSIOTHERAPY TN",
+                "Service Date": "01/08/2019 - 01/08/2019"
+            },
+            {
+                "Benifit Level": "IIN",
+                "Claim No.": "7561402797-01",
+                "Status": "Rejected",
+                "Provider": "RESULTS PHYSIOTHERAPY TN",
+                "Service Date": "01/04/2019 - 01/04/2019"
+            }
+        ],
+        "ResponseStatus": {
+            "success": true,
+            "statusCode": 200,
+            "statusMessage": "Message can be Success or Failure"
+        }
+    }
+}

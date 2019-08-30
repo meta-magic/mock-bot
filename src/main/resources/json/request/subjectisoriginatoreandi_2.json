@@ -1,0 +1,14 @@
+{
+      "Initial": false,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "Subject Is Originator EandI",
+          "requestId": requsetjson.Data.RequestMetaData.requestId,
+          "requestTime": requsetjson.Data.RequestMetaData.requestTime,
+          "commandSeqId": 2
+        },
+        "RequestParams": {
+          "Index": this._sharedService.index
+        }
+      }
+    }

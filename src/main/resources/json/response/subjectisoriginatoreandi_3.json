@@ -1,0 +1,60 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "Subject Is Originator EandI",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 2,
+      "totalResponsesAvailable": 3,
+      "responseSequenceId": 2,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData": [
+      {
+        "Service Dates": "05/13/2019 - 05/13/2019+",
+        "Rejection Code": "+OV +70 +69,VW ",
+        "Hover": "For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.",
+        "Reason for Rejection": "+OVERPAYMENT+ACCOUNTING ADJUSTMENTS: THE ERROR ASSOCIATED WITH 69 HAS BEEN CORRECTED. (EXCLUDED FROM TIME-TO-PAY)+ACCOUNTING ADJUSTMENTS: THERE IS AN ERROR. (EXCLUDED FROM TIME-TO-PAY)",
+        "Claim No": "7807383042-01",
+        "Benifit Level": "IIN",
+        "Processed Date": "23/23/2333 + 23/23/2333 + 23/23/2333 + 23/23/2333 + 23/23/2333",
+        "Procedure Code": "43545 + 5345 + 535 + 55ff + 567",
+        "Provider Name": "BODIN, TYLER R",
+        "Status": "Rejected",
+        "Action": "IBaag"
+      },
+      {
+        "Service Dates": "04/05/2019 - 04/05/2019 +",
+        "Rejection Code": "+44 +44 +44 +FD,44 ",
+        "Reason for Rejection": "+AT/T ELIGIBILITY - AUTO ASSIGNED+AT/T ELIGIBILITY - AUTO ASSIGNED+AT/T ELIGIBILITY - AUTO ASSIGNED+AT/T ELIGIBILITY - AUTO ASSIGNED",
+                "Hover": "For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.",
+        "Claim No": "8627425096-01",
+        "Benifit Level": "IIN",
+        "Processed Date": "23/23/2333 + 23/23/2333 + 23/23/2333 + 23/23/2333 + 23/23/2333",
+        "Procedure Code": "43545 + 5345 + 535 + 55ff + 567",
+        "Provider Name": "CUTTING EDGE PHYSICAL THERAPY",
+        "Status": "Rejected",
+        "Action": "IBaag"
+      },
+       {
+        "Service Dates": "04/05/2019 - 04/05/2019 +",
+        "Rejection Code": "+44 +44 +44 +FD,44 ",
+        "Hover": "For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.+For this type of rejection, our system detected that multiple claims has been submitted and the duplicate claim was already included in the first claim that has been submitted and paid by UHC. Hence, our system will automatically retrack the payment to the Provider. Once it has been processed, rejection documentation will be updated.",
+        "Reason for Rejection": "+AT/T ELIGIBILITY - AUTO ASSIGNED+AT/T ELIGIBILITY - AUTO ASSIGNED+AT/T ELIGIBILITY - AUTO ASSIGNED+AT/T ELIGIBILITY - AUTO ASSIGNED",
+        "Claim No": "8627425096-01",
+        "Benifit Level": "IIN",
+        "Processed Date": "23/23/2333 + 23/23/2333 + 23/23/2333 + 23/23/2333 + 23/23/2333",
+        "Procedure Code": "43545 + 5345 + 535 + 55ff + 567",
+        "Provider Name": "CUTTING EDGE PHYSICAL THERAPY",
+        "Status": "Rejected",
+        "Action": "Pass"
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

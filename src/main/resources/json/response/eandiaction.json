@@ -1,0 +1,26 @@
+{
+    "Data": {
+        "ResponseMetaData": {
+            "Command": "EandIAction",
+            "requestId": "1564590460722",
+            "responseTime": "12457895",
+            "commandSeqId": 1,
+            "totalResponsesAvailable": 1,
+            "responseSequenceId": 1,
+            "responseSanitizationRequired": true,
+            "completed": true
+        },
+        "ResponseData": [
+            {
+                "Physician office visit": "$45",
+                "Specialist Physician office visit": "$34",
+                "Urgent Care Center": "$23"
+            }
+        ],
+        "ResponseStatus": {
+            "Success": true,
+            "statusCode": 200,
+            "statusMessage": "Message can be Success or Failure"
+        }
+    }
+}

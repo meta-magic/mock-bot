@@ -1,0 +1,14 @@
+ {
+      "Initial": true,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "EandIAction",
+          "requestId": this._sharedService.getRequestId(),
+          "requestTime": this._sharedService.getRequestTime(),
+          "commandSeqId": 1
+        },
+        "RequestParams": {
+          "Action": row.action
+        }
+      }
+    }

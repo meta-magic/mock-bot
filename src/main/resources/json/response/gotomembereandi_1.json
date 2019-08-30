@@ -1,0 +1,30 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "Go To Member EandI",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 3,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData":  [
+    {
+      "First name": "BRUCE",
+      "Last Name": "MILLER",
+      "DOB": "03/03/1955",
+      "Address": "5414 POPLAR LAKES LANE",
+      "Plan Name": "Choice Plus",
+      "Policy Number": "00F7723",
+      "Effective Date": "04/01/2019"
+    }
+  ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

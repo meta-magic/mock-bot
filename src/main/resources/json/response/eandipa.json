@@ -1,0 +1,115 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "EandIPA",
+      "requestId": "fggf54te",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData": {
+      "padetails": [
+        {
+          "index": "0",
+          "Record Type": "rtyty",
+          "Number": "rtyty",
+          "First Name": "rtyty",
+          "RelationShip": "rtyty",
+          "Patient Status": "Out-Patient",
+          "Diagnosis": "rtyty",
+          "From": " mm/dd/yyyy",
+          "To": "mm/dd/yyyy",
+          "Paid": "Yes/No",
+          "Reason": " rrtohidfiuhgldfijhgd;lif",
+          "Tax ID": " rtyty"
+        },
+        {
+          "index": "1",
+          "Record Type": "rtyty",
+          "Number": "rtyty",
+          "First Name": "rtyty",
+          "RelationShip": "rtyty",
+          "Patient Status": "In-Patient",
+          "Diagnosis": "rtyty",
+          "From": " mm/dd/yyyy",
+          "To": "mm/dd/yyyy",
+          "Paid": " Yes/No",
+          "Reason": " rrtohidfiuhgldfijhgd;lif",
+          "Tax ID": " rtyty"
+        }
+      ],
+      "inpadetails": [
+        {
+          "index": "0",
+          "Procedure": "00000",
+          "Program Description": "rtyty",
+          "Program Type": "fgdfgdg",
+          "Status": " Approved/ declined",
+          "Written Comment": "gfhsfghfh",
+          "Service Provider Tin": "7897"
+        },
+        {
+          "index": "1",
+          "Procedure": "11111",
+          "Program Description": "rtyty",
+          "Program Type": "fgdfgdg",
+          "Status": " Approved/ declined",
+          "Written Comment": "gfhsfghfh",
+          "Service Provider Tin": "7897"
+        }
+      ],
+      "outpadetails": [
+        {
+          "index": "0",
+          "Procedure": "abbbb11111111",
+          "Program Type": "rtyty",
+          "From": " mm/dd/yyyy",
+          "To": " mm/dd/yyyy",
+          "Status": " Approved/ declined",
+          "Written Comment": " gfhsfghfh",
+          "Allowed Units": " 7897",
+          "Remaining Units": " 45"
+        },
+        {
+          "index": "1",
+          "Procedure": "abbbcdddd1111",
+          "Program Type": "rtyty",
+          "From": " mm/dd/yyyy",
+          "To": " mm/dd/yyyy",
+          "Status": " Pending",
+          "Written Comment": " gfhsfghfh",
+          "Allowed Units": " 7897",
+          "Remaining Units": " 45"
+        }
+      ],
+      "icuenotes": [
+        {
+          "index": "1",
+          "Created Date/Time": "09/26/2018 08:40 PM",
+          "Created By": "SYSTEM_HIPAA_278A <br/>SYSTEM_HIPAA_278A",
+          "Notes": "ServiceCode = 72148; Dx assoc w/svc: 1<br/>ServiceCode = 72148; Dx assoc w/svc: 1"
+        },
+         {
+          "index": "1",
+          "Created Date/Time": "09/26/2018 08:40 PM",
+          "Created By": "SYSTEM_HIPAA_278A <br/>SYSTEM_HIPAA_278A",
+          "Notes": "ServiceCode = 72148; Dx assoc w/svc: 1<br/>ServiceCode = 72148; Dx assoc w/svc: 1"
+        },
+         {
+          "index": "1",
+          "Created Date/Time": "09/26/2018 08:40 PM",
+          "Created By": "SYSTEM_HIPAA_278A <br/>SYSTEM_HIPAA_278A",
+          "Notes": "ServiceCode = 72148; Dx assoc w/svc: 1<br/>ServiceCode = 72148; Dx assoc w/svc: 1"
+        }
+      ]
+    },
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}
