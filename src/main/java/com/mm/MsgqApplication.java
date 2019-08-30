@@ -59,7 +59,8 @@ public class MsgqApplication extends SpringBootServletInitializer implements Rab
 	/* Creating a bean for the Message queue */
 	@Bean
 	public Queue getApp1Queue() {
-		return new Queue(getApplicationConfig().getApp1Queue(), false, false, false, null);
+		return new Queue(getApplicationConfig().getApp1Queue());
+		//return new Queue(getApplicationConfig().getApp1Queue(), false, false, false, null);
 	}
 	
 	/* Binding between Exchange and Queue using routing key */
@@ -77,7 +78,8 @@ public class MsgqApplication extends SpringBootServletInitializer implements Rab
 	/* Creating a bean for the Message queue */
 	@Bean
 	public Queue getApp2Queue() {
-		return new Queue(getApplicationConfig().getApp2Queue(), false, false, false, null);
+		return new Queue(getApplicationConfig().getApp2Queue());
+		//return new Queue(getApplicationConfig().getApp2Queue(), false, false, false, null);
 	}
 	
 	/* Binding between Exchange and Queue using routing key */
