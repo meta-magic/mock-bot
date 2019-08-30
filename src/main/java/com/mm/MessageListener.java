@@ -66,8 +66,12 @@ public class MessageListener {
      * @param UserDetails a user defined object used for deserialization of message
      */
     @RabbitListener(queues = "${app1.queue.name}")
-    public void receiveMessageForApp1(final String data) {
+    public void receiveMessageForApp1(final Object data) {
     	log.info("Received message: {} from app1 queue.", data);
+    	System.out.println("**************MESSAGE RECEIVED***************");
+    	System.out.println("DATA AS OBJECT "+data);
+    	System.out.println("DATA AS TOSTRING "+data.toString());
+    	System.out.println("**************MESSAGE RECEIVED***************");
 //		String exchange = getApplicationConfig().getApp2Exchange();
 //		String routingKey = getApplicationConfig().getApp2RoutingKey();
 //
