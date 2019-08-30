@@ -112,27 +112,9 @@ public class MessageListener {
 
 	}
 
-	public String decode(String url) {
+	public String decode(String str) {
 		try {
-			String prevURL = "";
-			String decodeURL = url;
-			while (!prevURL.equals(decodeURL)) {
-				prevURL = decodeURL;
-				decodeURL = URLDecoder.decode(decodeURL, "UTF-8");
-			}
-			String decodedData = decodeURL.replace("(Body:", "");
-			decodedData = decodedData.replace("\"Data\":\"{", "\"Data\":{");
-			decodedData = decodedData.replace("}}\"}", "}}}");
-			return decodedData;
-		} catch (UnsupportedEncodingException e) {
-			return "Issue while decoding" + e.getMessage();
-		}
-	}
-	// {"Initial":"true","Data":{\"RequestMetaData\":{\"Command\":\"Search EandI\",\"requestId\":1567182814107,\"requestTime\":1567182814098,\"commandSeqId\":1},\"RequestParams\":{\"memberID\":\"\",\"FirstName\":\"\",\"LastName\":\"\",\"DOB\":null}}}' MessageProperties [headers={}, contentType=text/plain, contentLength=0, redelivered=false, receivedExchange=, receivedRoutingKey=request, deliveryTag=1, consumerTag=amq.ctag-K6-tA-bci2RhtKqhPwm7qA, consumerQueue=request])
-
-	public static void main(String[] args) {
-		String str = args[0];
-		try {
+			System.out.println(str);
 			String data = URLDecoder.decode(str, "UTF-8").replace("(Body:", "");
 
 			System.out.println(data);
@@ -140,6 +122,34 @@ public class MessageListener {
 			System.out.println(data);
 			data = data.replace("}}\"}", "}}}");
 			System.out.println(data);
+			data = data.replace("\\", "");
+			System.out.println(new JSONObject(data));
+			return new JSONObject(data).toString();
+		} catch (Exception e) {
+			return "Issue while decoding" + e.getMessage();
+		}
+	}
+	// {"Initial":"true","Data":{\"RequestMetaData\":{\"Command\":\"Search EandI\",\"requestId\":1567182814107,\"requestTime\":1567182814098,\"commandSeqId\":1},\"RequestParams\":{\"memberID\":\"\",\"FirstName\":\"\",\"LastName\":\"\",\"DOB\":null}}}' MessageProperties [headers={}, contentType=text/plain, contentLength=0, redelivered=false, receivedExchange=, receivedRoutingKey=request, deliveryTag=1, consumerTag=amq.ctag-K6-tA-bci2RhtKqhPwm7qA, consumerQueue=request])
+
+	public static void main(String[] args) {
+		String str = "";
+		
+		
+		try {
+			
+			for (int i = 0; i < args.length; i++) {
+				str = str + args[i];	
+			}
+			
+			System.out.println(str);
+			String data = URLDecoder.decode(str, "UTF-8").replace("(Body:", "");
+
+			System.out.println(data);
+			data = data.replace("\"Data\":\"{", "\"Data\":{");
+			System.out.println(data);
+			data = data.replace("}}\"}", "}}}");
+			System.out.println(data);
+			data = data.replace("\\", "");
 			System.out.println(new JSONObject(data));
 			
 			
