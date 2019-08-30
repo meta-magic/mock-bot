@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
@@ -66,18 +68,19 @@ public class MessageListener {
      * @param UserDetails a user defined object used for deserialization of message
      */
     @RabbitListener(queues = "${app1.queue.name}")
-    public void receiveMessageForApp1(final String data) {
+    public void receiveMessageForApp1(final HttpServletRequest data) {
     	log.info("Received message: {} from app1 queue.", data);
     	System.out.println("**************MESSAGE RECEIVED***************");
     	System.out.println("DATA AS OBJECT "+data);
-    	System.out.println("DATA AS TOSTRING "+data.toString());
+    	System.out.println("DATA AS TOSTRING "+data.getParameter("Data"));
     	System.out.println("**************MESSAGE RECEIVED***************");
 		String exchange = getApplicationConfig().getApp2Exchange();
 		String routingKey = getApplicationConfig().getApp2RoutingKey();
 
 		
 		try {
-			atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data);
+			
+			atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(data.getParameter("Data"));
 			System.out.println("JSON DATA "+json);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
