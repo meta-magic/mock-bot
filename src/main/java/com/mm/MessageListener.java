@@ -71,8 +71,6 @@ public class MessageListener {
     	log.info("Received message: {} from app1 queue.", data);
     	System.out.println("**************MESSAGE RECEIVED***************");
     	System.out.println("DATA AS OBJECT "+data);
-    	//System.out.println("DATA AS TOSTRING "+data.getParameter("Data"));
-    	
 		String exchange = getApplicationConfig().getApp2Exchange();
 		String routingKey = getApplicationConfig().getApp2RoutingKey();
 
@@ -123,13 +121,34 @@ public class MessageListener {
                         prevURL=decodeURL;  
                         decodeURL=URLDecoder.decode( decodeURL, "UTF-8" );  
                    }  
-                   return decodeURL;  
+                   String decodedData = decodeURL.replace("(Body:", "");
+                   decodedData = decodedData.replace("\"Data\":\"{", "\"Data\":{");
+                   decodedData = decodedData.replace("}}\"}", "}}}");
+                   return decodedData;  
               } catch (UnsupportedEncodingException e) {  
                    return "Issue while decoding" +e.getMessage();  
               }  
     }  
 	
-    
+    public static void main(String[] args) {
+		String str = args[0];
+		try {
+			String data = URLDecoder.decode( str, "UTF-8" ).replace("(Body:", "");
+			
+			System.out.println(data);
+			data = data.replace("\"Data\":\"{", "\"Data\":{");
+			System.out.println(data);
+			data = data.replace("}}\"}", "}}}");
+			System.out.println(data);
+			System.out.println(new JSONObject(data));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}
     private Object getRequestResponse(String command, String commandSeqId){
     	String fileName = command+"_"+commandSeqId+".json";
     	
