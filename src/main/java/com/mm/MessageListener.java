@@ -73,37 +73,61 @@ public class MessageListener {
 	public void receiveMessageForApp1(final Object data) {
 		log.info("Received message: {} from app1 queue.", data);
 		System.out.println("**************MESSAGE RECEIVED***************");
-		System.out.println("DATA AS OBJECT " + data);
+		System.out.println(data);
 		String exchange = getApplicationConfig().getApp2Exchange();
 		String routingKey = getApplicationConfig().getApp2RoutingKey();
 
 		
-		System.out.println("**************MESSAGE RECEIVED***************");
 
 		try {
 			String decodeData = this.decode(data.toString());
-			System.out.println("*******decodeData********" + decodeData);
-			atg.taglib.json.util.JSONObject json = new atg.taglib.json.util.JSONObject(decodeData);
-			System.out.println(" decodeData JSON DATA " + json);
-			
-				
-			
+			System.out.println("**************DECODED DATA***************");
+			JSONObject json = new JSONObject(decodeData);
+			System.out.println(decodeData);
 			if (json.has("Data")) {
 				String strData = json.getString("Data");
-				System.out.println("**********strData********"+strData);
-				/*
-				if (requestMetaData.has("Command")) {
-					String command = requestMetaData.getString("Command");
-					String commandSeqId = requestMetaData.getString("commandSeqId");
+				JSONObject requestMetaDataJson = new JSONObject(strData);
+				JSONObject requestMetaDataJson1 = new JSONObject(requestMetaDataJson.getString("RequestMetaData"));
+				
+				if (requestMetaDataJson1.has("Command") && requestMetaDataJson1.has("commandSeqId")) {
+					String command = requestMetaDataJson1.getString("Command");
+					String commandSeqId = requestMetaDataJson1.getString("commandSeqId");
+					System.out.println("COMMAND "+command +" COMMANDSEQID"+commandSeqId);
 					if (command != null && commandSeqId != null) {
 						command = command.toLowerCase().replace(" ", "");
-						Object response = this.getRequestResponse(command, commandSeqId);
+						JSONObject response = this.getRequestResponse(command, commandSeqId);
+						
+						System.out.println("SENDING RESPONSE FOR COMMAND "+command +" COMMANDSEQID"+commandSeqId);
+						System.out.println(response.toString());
 						messageSender.sendMessage(rabbitTemplate, exchange, routingKey, response.toString());
+						
+						System.out.println("*******CHECKING FOR MULTIPLE RESPONSE**********");
+						if(response.has("Data") && response.getJSONObject("Data").has("ResponseMetaData")){
+							JSONObject newresponse =  response.getJSONObject("Data").getJSONObject("ResponseMetaData");
+							Integer newcommandSeqId = new Integer(newresponse.getString("commandSeqId"));
+							newcommandSeqId++;
+							Integer newtotalResponsesAvailable = new Integer(newresponse.getString("totalResponsesAvailable"));
+							System.out.println("1 NEWCOMMANDSEQID "+newcommandSeqId +" NewtotalResponsesAvailable "+newtotalResponsesAvailable);
+							for (; newcommandSeqId <= newtotalResponsesAvailable; newcommandSeqId++) {
+								Thread.sleep(5000);
+								System.out.println();
+								System.out.println();
+								System.out.println();
+								System.out.println();
+								System.out.println(" 2 COMMAND "+command +" COMMANDSEQID"+newcommandSeqId);
+								JSONObject response1 = this.getRequestResponse(command, (newcommandSeqId)+"");
+								
+								messageSender.sendMessage(rabbitTemplate, exchange, routingKey, response1.toString());
+								System.out.println("Sending response for commandSeqId "+response1);
+
+							}
+							
+						}
 						log.info("<< Exiting receiveMessageForApp1() after API call.");
 					}
 
 				}
-				*/
+				
 			}
 		} catch (Exception e) {
 			log.error("Internal server error occurred in API call. Bypassing message requeue {}", e);
@@ -114,18 +138,23 @@ public class MessageListener {
 
 	public String decode(String str) {
 		try {
-			System.out.println(str);
+			//System.out.println(str);
 			String data = URLDecoder.decode(str, "UTF-8").replace("(Body:", "");
 
-			System.out.println(data);
+			//System.out.println("111 - "+data);
 			data = data.replace("\"Data\":\"{", "\"Data\":{");
-			System.out.println(data);
+			//System.out.println("222 - "+data);
 			data = data.replace("}}\"}", "}}}");
-			System.out.println(data);
+			//System.out.println("333 - "+data);
 			data = data.replace("\\", "");
-			System.out.println(new JSONObject(data));
+			data = data.replace(data.substring(data.indexOf("MessageProperties")),"");
+			//System.out.println("333.11 - "+data);
+			data = data.replace("'", "");
+			//System.out.println("444.00 - "+data);
+			//System.out.println("444.11 - "+new JSONObject(data));
 			return new JSONObject(data).toString();
 		} catch (Exception e) {
+			e.printStackTrace();
 			return "Issue while decoding" + e.getMessage();
 		}
 	}
@@ -150,6 +179,8 @@ public class MessageListener {
 			data = data.replace("}}\"}", "}}}");
 			System.out.println(data);
 			data = data.replace("\\", "");
+			data = data.replace(data.substring(data.indexOf("MessageProperties")),"");
+			System.out.println(data);
 			System.out.println(new JSONObject(data));
 			
 			
@@ -162,7 +193,7 @@ public class MessageListener {
 		}
 	}
 
-	private Object getRequestResponse(String command, String commandSeqId) {
+	private JSONObject getRequestResponse(String command, String commandSeqId) {
 		String fileName = command + "_" + commandSeqId + ".json";
 
 		String filePath = responseFilePath + fileName;
@@ -183,14 +214,14 @@ public class MessageListener {
 			e.printStackTrace();
 		}
 
-		return "";
+		return new JSONObject();
 	}
 
 	/**
 	 * Message listener for app2
 	 * 
 	 * Enable for testing purpose.
-	 */
+	
 	@RabbitListener(queues = "${app2.queue.name}")
 	public void receiveMessageForApp2(Object data) {
 		log.info("Received message: {} from app2 queue.", data);
@@ -199,5 +230,5 @@ public class MessageListener {
 		System.out.println("DATA AS TOSTRING2 " + data.toString());
 		System.out.println("**************MESSAGE RECEIVED***************");
 	}
-
+ */
 }
