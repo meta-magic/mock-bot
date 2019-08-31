@@ -8,7 +8,7 @@
       "totalResponsesAvailable": 3,
       "responseSequenceId": 2,
       "responseSanitizationRequired": true,
-      "completed": false
+      "completed": true
     },
     "ResponseData": [
       {
