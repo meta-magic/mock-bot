@@ -1,0 +1,24 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnR_RxWeb",
+      "requestId": "1564657693949",
+      "requestTime": "1564657693911",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": true
+    },
+    "ResponseData": [
+      {
+        "Url": "https://angular.io"
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

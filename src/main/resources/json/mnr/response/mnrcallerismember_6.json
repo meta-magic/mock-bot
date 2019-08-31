@@ -1,0 +1,51 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnRCallerIsMember",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 6,
+      "totalResponsesAvailable": 6,
+      "responseSequenceId": 6,
+      "responseSanitizationRequired": true,
+      "completed": true
+    },
+    "ResponseData": [
+      {
+        "Service Date": "6/26/2019",
+        "Rx Number": "000000629364",
+        "Drug Name": "DICLOFENAC GEL 1%",
+        "Status": "Rejected",
+        "Group": "IS5820001A",
+        "Claim Messages": "Prod/Service Not Covered (70) + CMS Appeal Rights Notice (569) +Provide Exception Process Printed Notice",
+                "Hover": "Create a <br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a another data for  another method<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited."
+
+      },
+      {
+        "Service Date": "6/25/2019",
+        "Rx Number": "000000629364",
+        "Drug Name": "DICLOFENAC GEL 1%",
+        "Status": "Rejected",
+        "Group": "IS5820001A",
+        "Claim Messages": "Prod/Service Not Covered (70) + CMS Appeal Rights Notice (569) +Provide Exception Process Printed Notice + VENTOLIN HFA PREF'D + Non-formulary, call PA at 800 711-4555 + + + + + +",
+        "Hover": "Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited."
+
+      },
+      {
+        "Service Date": "6/6/2019",
+        "Rx Number": "000000629364",
+        "Drug Name": "DICLOFENAC GEL 1%",
+        "Status": "Rejected",
+        "Group": "IS5820001A",
+        "Claim Messages": "Prod/Service Not Covered (70) + CMS Appeal Rights Notice (569) +Provide Exception Process Printed Notice + VENTOLIN HFA PREF'D + Non-formulary, call PA at 800 711-4555 + + + + + +",
+        "Hover": "Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited.+Create a Coverage Determination for Non Formulary Exception via Maestro<br/>Member needs to contact their provider and advise him/her that there a request has been raised already so that the approval can be expedited."
+
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

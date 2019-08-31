@@ -1,0 +1,36 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Pharmacy": "MnR_Drug_Details",
+      "RequestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": true
+    },
+    "ResponseData": [
+      {
+        "Pharmacy ": "KROGER PHARMACY 247079440<br/> OLD BROWNSBORO RDLOUISVILLE,KY 40241<br/>  Phone Number:5024258407(TTY 711)",
+        "Pharmacy Type": "Retail-Preferred Retail Pharmacy Network-90 day prescription refill",
+        "Retails": "0.26 mi "
+      },
+      {
+        "Pharmacy ": "KROGER PHARMACY 247079440 OLD BROWNSBORO RDLOUISVILLE,KY 40241 Phone Number:5024258407(TTY 711)",
+        "Pharmacy Type": "Retail-Preferred Retail Pharmacy Network-90 day prescription refill",
+        "Retails": "0.26 mi "
+      },
+      {
+        "Pharmacy ": "KROGER PHARMACY 247079440 OLD BROWNSBORO RDLOUISVILLE,KY 40241 Phone Number:5024258407(TTY 711)",
+        "Pharmacy Type": "Retail-Preferred Retail Pharmacy Network-90 day prescription refill",
+        "Retails": "0.26 mi "
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

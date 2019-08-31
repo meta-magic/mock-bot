@@ -1,0 +1,26 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnR_DrugName",
+      "requestId": "fggf54te",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": true
+    },
+    "ResponseData": [
+      {
+        "Dosage": "+jhsdcc+jdshfgjdk+sdfkjhhhsk+sdg",
+        "Frequency": "+jhsdcc+jdshfgjdk+sdfkjhhhsk+sdg",
+        "Package": "+jhsdcc+jdshfgjdk+sdfkjhhhsk+sdg"
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}
