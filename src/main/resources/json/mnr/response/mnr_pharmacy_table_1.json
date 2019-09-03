@@ -1,0 +1,25 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnR_pharmacy_table",
+      "RequestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": true
+    }, 
+    "ResponseData": [
+      {
+        "Copay": "hdfgkzjhf",
+        "DrugCostEstimator": "23323"
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}
