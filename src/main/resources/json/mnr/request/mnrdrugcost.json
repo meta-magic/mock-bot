@@ -3,12 +3,12 @@
       "Data": {
         "RequestMetaData": {
           "Command": "MnR_DrugCost",
-          "requestId": this._sharedService.getRequestId(),
-          "requestTime": this._sharedService.getRequestTime(),
+          "requestId": "02138921980jksadhjkajd21391390",
+          "requestTime": "098765432345678",
           "commandSeqId": 1
         },
         "RequestParams": {
-          "index": this._sharedService.index
+          "index": "1"
         }
       }
     }

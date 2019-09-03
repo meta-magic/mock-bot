@@ -3,13 +3,13 @@
         "Data": { 
           "RequestMetaData": {
             "Command": "MnR_DrugName",
-            "requestId": this._sharedService.getRequestId(),
-            "requestTime": this._sharedService.getRequestTime(),
+            "requestId": "02138921980jksadhjkajd21391390",
+            "requestTime": "098765432345678",
             "commandSeqId": 1
           },
           "RequestParams": {
-            "DrugName": this.drugCostModel.drugname,
-            "CountyName": this.drugCostModel.county
+            "DrugName": "",
+            "CountyName": ""
           }
         }
       }

@@ -3,12 +3,12 @@
       "Data": {
         "RequestMetaData": {
           "Command": "Subject Is Originator EandI",
-          "requestId": request.Data.RequestMetaData.requestId,
-          "requestTime": request.Data.RequestMetaData.requestTime,
+          "requestId": "1",
+          "requestTime": "1212121",
           "commandSeqId": 3
         },
         "RequestParams": {
-          "Index": this._sharedService.index
+          "Index": "1"
         }
       }
     }

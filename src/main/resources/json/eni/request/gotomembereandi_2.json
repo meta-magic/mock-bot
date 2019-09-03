@@ -3,12 +3,12 @@
       "Data": {
         "RequestMetaData": {
           "Command": "Go To Member EandI",
-          "requestId": requsetjson.Data.RequestMetaData.requestId,
-          "requestTime": requsetjson.Data.RequestMetaData.requestTime,
+          "requestId": "121212121",
+          "requestTime": "232332323233323",
           "commandSeqId": 2
         },
         "RequestParams": {
-          "Index": this._sharedService.index
+          "Index": "1"
         }
       }
     }

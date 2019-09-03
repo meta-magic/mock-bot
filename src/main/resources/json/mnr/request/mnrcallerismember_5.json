@@ -3,13 +3,13 @@
       "Data": {
         "RequestMetaData": {
           "Command": "MnRCallerIsMember",
-          "requestId": requsetjson.Data.RequestMetaData.requestId,
-          "requestTime": requsetjson.Data.RequestMetaData.requestTime,
+          "requestId": "",
+          "requestTime": "",
           "commandSeqId": 5
         },
         "RequestParams": {
-          "Caller Is The Member": this.check,
-          "Index": this._sharedService.index
+          "Caller Is The Member": "",
+          "Index": "1"
         }
       }
     }

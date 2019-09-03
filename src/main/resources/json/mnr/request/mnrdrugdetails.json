@@ -3,15 +3,15 @@
         "Data": {
           "RequestMetaData": {
             "Command": "MnR_Drug_Details",
-            "requestId": this._sharedService.getRequestId(),
-            "requestTime": this._sharedService.getRequestTime(),
+            "requestId": "02138921980jksadhjkajd21391390",
+            "requestTime": "098765432345678",
             "commandSeqId": 1
           },
           "RequestParams": {
-            "Dosage": this.drugCostModel.dosage,
-            "Frequency": this.drugCostModel.frequency,
-            "Quantity": this.drugCostModel.quantity,
-            "Package": this.drugCostModel.package
+            "Dosage": "",
+            "Frequency": "",
+            "Quantity": "",
+            "Package": ""
           }
         }
       }
