@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Message sender to send message to queue using exchange.
- * @author deepak.af.kumar
+ * @author Ketan Gote
  *
  */
 

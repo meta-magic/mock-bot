@@ -24,7 +24,7 @@ import atg.taglib.json.util.JSONObject;
 /**
  * Message Listener for RabbitMQ
  * 
- * @author deepak.af.kumar
+ * @author Ketan Gote
  *
  */
 
@@ -71,9 +71,8 @@ public class MessageListener {
 	 */
 	@RabbitListener(queues = "${app1.queue.name}")
 	public void receiveMessageForApp1(final Object data) {
-		log.info("Received message: {} from app1 queue.", data);
-		System.out.println("**************MESSAGE RECEIVED***************");
-		System.out.println(data);
+		log.info("*****************");
+		log.info("Received message: {} from app1 queue.", data);		
 		String exchange = getApplicationConfig().getApp2Exchange();
 		String routingKey = getApplicationConfig().getApp2RoutingKey();
 
@@ -81,9 +80,9 @@ public class MessageListener {
 
 		try {
 			String decodeData = this.decode(data.toString());
-			System.out.println("**************DECODED DATA***************");
 			JSONObject json = new JSONObject(decodeData);
-			System.out.println(decodeData);
+			log.info("Decoded data {}.", decodeData);	
+			
 			if (json.has("Data")) {
 				String strData = json.getString("Data");
 				JSONObject requestMetaDataJson = new JSONObject(strData);
@@ -92,33 +91,39 @@ public class MessageListener {
 				if (requestMetaDataJson1.has("Command") && requestMetaDataJson1.has("commandSeqId")) {
 					String command = requestMetaDataJson1.getString("Command");
 					String commandSeqId = requestMetaDataJson1.getString("commandSeqId");
-					System.out.println("COMMAND "+command +" COMMANDSEQID"+commandSeqId);
+					log.info("Command {} and CommandSequenceId {} ",command,commandSeqId);
+					
 					if (command != null && commandSeqId != null) {
+						
 						command = command.toLowerCase().replace(" ", "");
+						
 						JSONObject response = this.getRequestResponse(command, commandSeqId);
 						
-						System.out.println("SENDING RESPONSE FOR COMMAND "+command +" COMMANDSEQID"+commandSeqId);
-						System.out.println(response.toString());
+						log.info("Sending Response {} For Command {} and CommandSequenceId ",response.toString() , command, commandSeqId);
+						
 						messageSender.sendMessage(rabbitTemplate, exchange, routingKey, response.toString());
 						
-						System.out.println("*******CHECKING FOR MULTIPLE RESPONSE**********");
+						log.info("*******CHECKING IF FOR MULTIPLE RESPONSE PRESENT FOR THIS REQUEST**********");
+						
 						if(response.has("Data") && response.getJSONObject("Data").has("ResponseMetaData")){
+						
 							JSONObject newresponse =  response.getJSONObject("Data").getJSONObject("ResponseMetaData");
 							Integer newcommandSeqId = new Integer(newresponse.getString("commandSeqId"));
 							newcommandSeqId++;
 							Integer newtotalResponsesAvailable = new Integer(newresponse.getString("totalResponsesAvailable"));
-							System.out.println("1 NEWCOMMANDSEQID "+newcommandSeqId +" NewtotalResponsesAvailable "+newtotalResponsesAvailable);
+							
+							log.info("Total Available Response {} ",newtotalResponsesAvailable);
+							
 							for (; newcommandSeqId <= newtotalResponsesAvailable; newcommandSeqId++) {
-								Thread.sleep(5000);
-								System.out.println();
-								System.out.println();
-								System.out.println();
-								System.out.println();
-								System.out.println(" 2 COMMAND "+command +" COMMANDSEQID"+newcommandSeqId);
-								JSONObject response1 = this.getRequestResponse(command, (newcommandSeqId)+"");
 								
-								messageSender.sendMessage(rabbitTemplate, exchange, routingKey, response1.toString());
-								System.out.println("Sending response for commandSeqId "+response1);
+								log.info(" Command {} New CommandSequenceId ", command, newcommandSeqId);
+								
+								JSONObject nresponse = this.getRequestResponse(command, (newcommandSeqId)+"");
+								
+								messageSender.sendMessage(rabbitTemplate, exchange, routingKey, nresponse.toString());
+								
+								log.info("Sending Response {} For Command {} and CommandSequenceId ",nresponse.toString(), command, newcommandSeqId);
+								
 
 							}
 							
@@ -133,32 +138,24 @@ public class MessageListener {
 			log.error("Internal server error occurred in API call. Bypassing message requeue {}", e);
 			e.printStackTrace();
 		}
-
+		log.info("*****************");
 	}
 
 	public String decode(String str) {
 		try {
-			//System.out.println(str);
 			String data = URLDecoder.decode(str, "UTF-8").replace("(Body:", "");
 
-			//System.out.println("111 - "+data);
 			data = data.replace("\"Data\":\"{", "\"Data\":{");
-			//System.out.println("222 - "+data);
 			data = data.replace("}}\"}", "}}}");
-			//System.out.println("333 - "+data);
 			data = data.replace("\\", "");
 			data = data.replace(data.substring(data.indexOf("MessageProperties")),"");
-			//System.out.println("333.11 - "+data);
 			data = data.replace("'", "");
-			//System.out.println("444.00 - "+data);
-			//System.out.println("444.11 - "+new JSONObject(data));
 			return new JSONObject(data).toString();
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "Issue while decoding" + e.getMessage();
 		}
 	}
-	// {"Initial":"true","Data":{\"RequestMetaData\":{\"Command\":\"Search EandI\",\"requestId\":1567182814107,\"requestTime\":1567182814098,\"commandSeqId\":1},\"RequestParams\":{\"memberID\":\"\",\"FirstName\":\"\",\"LastName\":\"\",\"DOB\":null}}}' MessageProperties [headers={}, contentType=text/plain, contentLength=0, redelivered=false, receivedExchange=, receivedRoutingKey=request, deliveryTag=1, consumerTag=amq.ctag-K6-tA-bci2RhtKqhPwm7qA, consumerQueue=request])
 
 	public static void main(String[] args) {
 		String str = "";
