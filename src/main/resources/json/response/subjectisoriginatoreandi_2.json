@@ -8,7 +8,7 @@
 			"totalResponsesAvailable": 3,
 			"responseSequenceId": 2,
 			"responseSanitizationRequired": true,
-			"completed": true
+			"completed": false
 		},
 		"ResponseData": [{
 			"Benifit Level":"IIN",

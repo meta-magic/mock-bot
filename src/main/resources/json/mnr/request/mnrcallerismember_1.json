@@ -1,0 +1,15 @@
+{
+      "Initial": true,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "MnRCallerIsMember",
+          "requestId": this._sharedService.getRequestId(),
+          "requestTime": this._sharedService.getRequestTime(),
+          "commandSeqId": 1
+        },
+        "RequestParams": {
+          "Caller Is The Member": this.check,
+          "Index": this._sharedService.index
+        }
+      }
+    }

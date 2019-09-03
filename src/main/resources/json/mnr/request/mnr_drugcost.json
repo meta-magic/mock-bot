@@ -1,0 +1,14 @@
+{
+      "Initial": true,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "MnR_DrugCost",
+          "requestId": this._sharedService.getRequestId(),
+          "requestTime": this._sharedService.getRequestTime(),
+          "commandSeqId": 1
+        },
+        "RequestParams": {
+          "index": this._sharedService.index
+        }
+      }
+    }

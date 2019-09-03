@@ -1,0 +1,34 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnRSearch",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": true
+    },
+    "ResponseData": [
+      {
+        "Member Id": "020236067-1",
+        "Last Name": "VALLET",
+        "First Name": "BRYAN",
+        "Middle Name": "E",
+        "DOB": "11/24/1964",
+        "Age": "54",
+        "Address Line 1": "17057 RENNES RD",
+        "City": "PRAIRIEVILLE",
+        "State Code": "LA",
+        "Zip Code": "70769",
+        "Line of Business": "0"
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

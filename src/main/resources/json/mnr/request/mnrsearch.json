@@ -1,0 +1,18 @@
+{
+      "Initial": true,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "MnRSearch",
+          "requestId": this._sharedService.getRequestId(),
+          "requestTime": this._sharedService.getRequestTime(),
+          "commandSeqId": 1
+        },
+        "RequestParams": {
+          "memberID": searchObject.memberId,
+          "medicareID": searchObject.medicareId,
+          "FirstName": searchObject.firstName,
+          "LastName": searchObject.lastName,
+          "DOB": this.date.transform(searchObject.dob, 'MM/dd/yyyy')
+        }
+      }
+    }

@@ -1,0 +1,26 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnRCallerIsMember",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 4,
+      "totalResponsesAvailable": 6,
+      "responseSequenceId": 4,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData":[{
+    "Your Initial Coverage Limit": "$3,820.00",
+    "Copayments and Coinsurance paid by you": "$733.47",
+    "Your plan has Paid": "$1,734.02",
+    "Total paid by you and your plan": "$2,467.49",
+    "Amount remaining before coverage gap": "$1,352.51"
+  }],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

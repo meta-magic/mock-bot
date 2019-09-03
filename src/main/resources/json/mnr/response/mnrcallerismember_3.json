@@ -1,0 +1,25 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnRCallerIsMember",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 3,
+      "totalResponsesAvailable": 6,
+      "responseSequenceId": 3,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData":[{
+    "Plan Name": "AARP MedicareRx Preferred (PDP)",
+    "Plan Status": "ACTIVE",
+    "Plan Start Date": "20/7/2019",
+    "Plan Type": "AARP_PDP"
+  }],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

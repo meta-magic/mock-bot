@@ -1,0 +1,30 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnRCallerIsMember",
+      "requestId": "16",
+      "responseTime": " 541551",
+      "commandSeqId": 5,
+      "totalResponsesAvailable": 6,
+      "responseSequenceId": 5,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData": {
+      "Message": "Message from BOT will be displayed",
+      "Confirmation": "Confirmation Message from BOT will be displayed ",
+      "RejectedClaimData": [
+        {
+          "Service Date": "2/25/2014",
+          "Rx Number": "651665646",
+          "status": "Rejected"
+        }
+      ]
+    },
+    "ResponseStatus": {
+      "Success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

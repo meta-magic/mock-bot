@@ -1,0 +1,15 @@
+{
+        "Initial": true,
+        "Data": { 
+          "RequestMetaData": {
+            "Command": "MnR_DrugName",
+            "requestId": this._sharedService.getRequestId(),
+            "requestTime": this._sharedService.getRequestTime(),
+            "commandSeqId": 1
+          },
+          "RequestParams": {
+            "DrugName": this.drugCostModel.drugname,
+            "CountyName": this.drugCostModel.county
+          }
+        }
+      }

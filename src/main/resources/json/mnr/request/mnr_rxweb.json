@@ -1,0 +1,14 @@
+{
+      "Initial": true,
+      "Data": {
+        "RequestMetaData": {
+          "Command": "MnR_RxWeb",
+          "requestId": this._sharedService.getRequestId(),
+          "requestTime": this._sharedService.getRequestTime(),
+          "commandSeqId": 1
+        },
+        "RequestParams": {
+          "Drug Name": row.drugname
+        }
+      }
+    }

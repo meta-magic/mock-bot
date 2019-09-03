@@ -1,0 +1,24 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnR_DrugCost",
+      "requestId": "15643hhjh85069691a11ghg",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 1,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": true
+    },
+    "ResponseData": [
+      {
+        "DropDown Option": "+Jefferson+xxxx+vvvv+yyy"
+      }
+    ],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}

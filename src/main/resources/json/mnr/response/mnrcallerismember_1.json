@@ -1,0 +1,27 @@
+{
+  "Data": {
+    "ResponseMetaData": {
+      "Command": "MnRCallerIsMember",
+      "requestId": "a8f7fe52-b1c1-11e9-a2a3-2a2ae2dbcce4",
+      "responseTime": "1564385069691",
+      "commandSeqId": 1,
+      "totalResponsesAvailable": 6,
+      "responseSequenceId": 1,
+      "responseSanitizationRequired": true,
+      "completed": false
+    },
+    "ResponseData":[ {
+      "Full Name": "Bryan E Vallet ",
+      "Status": "ACTIVE - NEW ENROLLEE",
+      "Gender": "Male",
+      "DOB": "11/24/1964",
+      "Age": "54",
+      "Address": "17057RENNESRDPRAIRIEVILLE,LA,70769"
+    }],
+    "ResponseStatus": {
+      "success": true,
+      "statusCode": 200,
+      "statusMessage": "Message can be Success or Failure"
+    }
+  }
+}
