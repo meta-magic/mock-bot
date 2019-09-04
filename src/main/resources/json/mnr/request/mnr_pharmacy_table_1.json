@@ -3,12 +3,12 @@
       "Data": {
         "RequestMetaData": {
           "Command": "MnR_pharmacy_table",
-          "requestId": this._sharedService.getRequestId(),
-          "requestTime": this._sharedService.getRequestTime(),
+          "requestId": "23232332323",
+          "requestTime": "232223232323232",
           "commandSeqId": 1
         },
         "RequestParams": {
-          "Index": row.index
+          "Index": "1"
         }
       }
     }
