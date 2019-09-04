@@ -119,7 +119,7 @@ public class MessageListener {
 								log.info(" Command {} New CommandSequenceId ", command, newcommandSeqId);
 								
 								JSONObject nresponse = this.getRequestResponse(command, (newcommandSeqId)+"");
-								
+								Thread.sleep(2000);
 								messageSender.sendMessage(rabbitTemplate, exchange, routingKey, nresponse.toString());
 								
 								log.info("Sending Response {} For Command {} and CommandSequenceId ",nresponse.toString(), command, newcommandSeqId);
