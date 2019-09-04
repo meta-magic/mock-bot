@@ -1,18 +1,15 @@
 {
-      "Initial": true,
-      "Data": {
-        "RequestMetaData": {
-          "Command": "MnRSearch",
-          "requestId": "02138921980jksadhjkajd21391390",
-          "requestTime": "098765432345678",
-          "commandSeqId": 1
-        },
-        "RequestParams": {
-          "memberID": "1",
-          "medicareID": "1",
-          "FirstName": "John",
-          "LastName": "Doe",
-          "DOB": "2019/10/10"
-        }
-      }
-    }
+  "RequestMetaData": {
+    "Command": "MnRSearch",
+    "requestId": "02138921980jksadhjkajd21391390",
+    "requestTime": "098765432345678",
+    "commandSeqId": 1
+  },
+  "RequestParams": {
+    "memberID": "1",
+    "medicareID": "1",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "DOB": "2019/10/10"
+  }
+}

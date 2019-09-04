@@ -1,14 +1,11 @@
 {
-      "Initial": true,
-      "Data": {
-        "RequestMetaData": {
-          "Command": "MnR_pharmacy_table",
-          "requestId": "23232332323",
-          "requestTime": "232223232323232",
-          "commandSeqId": 1
-        },
-        "RequestParams": {
-          "Index": "1"
-        }
-      }
-    }
+  "RequestMetaData": {
+    "Command": "MnR_pharmacy_table",
+    "requestId": "23232332323",
+    "requestTime": "232223232323232",
+    "commandSeqId": 1
+  },
+  "RequestParams": {
+    "Index": "1"
+  }
+}

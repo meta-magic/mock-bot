@@ -1,16 +1,12 @@
 {
-      "Initial": false,
-      "Data": {
-        "RequestMetaData": {
-          "Command": "MnRCallerIsMember",
-          "requestId": "0987656781111",
-          "requestTime": "029832320302",
-          "commandSeqId": 2
-        },
-        "RequestParams": {
-          "Caller Is The Member": "23232",
-          "Index": "1"
-        }
-      }
-    }
-
+  "RequestMetaData": {
+    "Command": "MnRCallerIsMember",
+    "requestId": "0987656781111",
+    "requestTime": "029832320302",
+    "commandSeqId": 2
+  },
+  "RequestParams": {
+    "Caller Is The Member": "23232",
+    "Index": "1"
+  }
+}

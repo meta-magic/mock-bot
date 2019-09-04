@@ -1,15 +1,12 @@
 {
-      "Initial": true,
-      "Data": {
-        "RequestMetaData": {
-          "Command": "MnRCallerIsMember",
-          "requestId": "02138921980jksadhjkajd21391390",
-          "requestTime": "098765432345678",
-          "commandSeqId": 1
-        },
-        "RequestParams": {
-          "Caller Is The Member": "",
-          "Index": "1"
-        }
-      }
-    }
+  "RequestMetaData": {
+    "Command": "MnRCallerIsMember",
+    "requestId": "02138921980jksadhjkajd21391390",
+    "requestTime": "098765432345678",
+    "commandSeqId": 1
+  },
+  "RequestParams": {
+    "Caller Is The Member": "",
+    "Index": "1"
+  }
+}

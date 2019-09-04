@@ -1,15 +1,12 @@
 {
-      "Initial": false,
-      "Data": {
-        "RequestMetaData": {
-          "Command": "MnRCallerIsMember",
-          "requestId": "23232",
-          "requestTime": "",
-          "commandSeqId": 3
-        },
-        "RequestParams": {
-          "Caller Is The Member": "",
-          "Index": "1"
-        }
-      }
-    }
+  "RequestMetaData": {
+    "Command": "MnRCallerIsMember",
+    "requestId": "23232",
+    "requestTime": "",
+    "commandSeqId": 3
+  },
+  "RequestParams": {
+    "Caller Is The Member": "",
+    "Index": "1"
+  }
+}

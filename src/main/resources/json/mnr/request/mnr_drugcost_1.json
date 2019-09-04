@@ -1,14 +1,11 @@
 {
   "RequestMetaData": {
-    "Command": "MnR_Drug_Details",
+    "Command": "MnR_DrugCost",
     "requestId": "02138921980jksadhjkajd21391390",
     "requestTime": "098765432345678",
     "commandSeqId": 1
   },
   "RequestParams": {
-    "Dosage": "",
-    "Frequency": "",
-    "Quantity": "",
-    "Package": ""
+    "index": "1"
   }
 }
